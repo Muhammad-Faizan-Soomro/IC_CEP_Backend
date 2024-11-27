@@ -8,7 +8,7 @@ const app = express();
 app.use(express.json());
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: "https://ic-cep-frontend.vercel.app",
   })
 );
 
@@ -16,7 +16,7 @@ const PORT = 5000;
 
 // connect databae
 mongoose
-  .connect("mongodb://127.0.0.1/ic")
+  .connect("mongodb+srv://Faizan:11002200@cluster0.xgamy.mongodb.net/ic")
   .then(console.log("MongoDB connected successfully"));
 
 // read all tasks
